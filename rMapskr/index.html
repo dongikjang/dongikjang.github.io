@@ -1,7 +1,15 @@
 <!doctype HTML>
 <meta charset = 'utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Language" content="en">
+
 <html>
   <head>
+
+    <link href="https://assets-cdn.github.com/assets/github-711f4bf5fc9082e60457fca0cbb9a16acce23f893b93b14c0d3b1cc7f5edb8b2.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://assets-cdn.github.com/assets/github2-281feeb6e79125616cf07635b26dc5aaa0887df5416f1a366162e1d394f33dc4.css" media="all" rel="stylesheet" type="text/css" />
+    
+    
     <link rel='stylesheet' href='../../rMapskr/inst/libraries/leaflet/external/leaflet.css'>
     <link rel='stylesheet' href='../../rMapskr/inst/libraries/leaflet/external/leaflet-rMapskr.css'>
     <link rel='stylesheet' href='../../rMapskr/inst/libraries/leaflet/external/legend.css'>
@@ -23,53 +31,148 @@
     </style>
     
   </head>
+
   <body >
-    
-    <div id = 'chart156ef76f40353' class = 'rMapskr leaflet'></div>    
-    <script>
-  	var spec = {
-		"dom": "chart156ef76f40353",
-		"width":           800,
-		"height":            600,
-		"mapOpts": {
-			"crs": L.Proj.CRS.TMS.Naver,
-			"worldCopyJump": false,
-			"continuousWorld": true,
-			"zoomControl": true 
-		},
-		"center": [      37.566429,     126.977997 ],
-		"zoom":              9,
-		"id": "chart156ef76f40353" 
-	}
-	 
-	var map = L.map(spec.dom, spec.mapOpts)
 
-	var baseLayers = {
-		'Naver Street Map': L.Proj.TileLayer.TMS.provider('NaverMap.Street').addTo(map),
-		'Naver Satellite Map': L.Proj.TileLayer.TMS.provider('NaverMap.Satellite'),
-		'Naver Hybrid Map': L.Proj.TileLayer.TMS.provider('NaverMap.Hybrid'),
-		'Naver Cadastral Map': L.Proj.TileLayer.TMS.provider('NaverMap.Cadastral', null, {opacity : 1.0})
+    <div id="readme" class="boxed-group flush clearfix announce instapaper_body md">
 
-	};
-	var overlayLayers = {
-		'Naver Cadastral Map': L.Proj.TileLayer.TMS.provider('NaverMap.Cadastral')
-	};
-	L.control.layers(baseLayers, overlayLayers, {collapsed: false}).addTo(map);
-    map.setView(spec.center, spec.zoom);
-     
-    L.marker([37.5545355, 126.9706773])
-    	.addTo( map )
-  		.bindPopup("<p> Seoul Station </p>")
-	L.marker([37.5666208, 126.9783823])
-		.addTo( map )
-		.bindPopup("<p> City Hall of Seoul </p>")
+      <article class="markdown-body entry-content" itemprop="mainContentOfPage">
+      <h1>
+        <a name="user-content-rmapskr" class="anchor" href="#rmapskr" aria-hidden="true">
+          <span class="octicon octicon-link"></span>
+        </a>
+        rMapskr
+      </h1>
 
-    if (spec.circle2){
-      for (var c in spec.circle2){
-        var circle = L.circle(c.center, c.radius, c.opts)
-         .addTo(map);
-      }
-    }
-	</script>
+      <h3>
+        <a name="user-content-naver-map" class="anchor" href="#naver-map" aria-hidden="true">
+          <span class="octicon octicon-link"></span>
+        </a>
+        Naver Map
+      </h3>
+
+      <div class="highlight highlight-coffee">
+        <pre>
+<span class="nx">require</span><span class="p">(</span><span class="nx">rMapskr</span><span class="p">)</span>
+<span class="nx">map3</span> <span class="o">&lt;-</span> <span class="nx">Leaflet$new</span><span class="p">(</span><span class="s">"naver"</span><span class="p">)</span>
+<span class="c1">#map3$setView(c(37.56641861115186, 126.97787362769193), zoom = 11)</span>
+<span class="nx">map3$marker</span><span class="p">(</span><span class="nx">c</span><span class="p">(</span><span class="mf">37.5545355</span><span class="p">,</span> <span class="mf">126.9706773</span><span class="p">),</span> <span class="nv">bindPopup = </span><span class="s">"&lt;p&gt; Seoul Station &lt;/p&gt;"</span><span class="p">)</span>
+<span class="nx">map3$marker</span><span class="p">(</span><span class="nx">c</span><span class="p">(</span><span class="mf">37.5666208</span><span class="p">,</span> <span class="mf">126.9783823</span><span class="p">),</span> <span class="nv">bindPopup = </span><span class="s">"&lt;p&gt; City Hall of Seoul &lt;/p&gt;"</span><span class="p">)</span>
+<span class="nx">map3</span>
+        </pre>
+      </div>
+      <div id = 'chart156ef76f40353' class = 'rMapskr leaflet'></div>    
+        <script>
+          var spec = {
+        		"dom": "chart156ef76f40353",
+        		"width":           800,
+        		"height":            600,
+        		"mapOpts": {
+        			"crs": L.Proj.CRS.TMS.Naver,
+        			"worldCopyJump": false,
+        			"continuousWorld": true,
+        			"zoomControl": true 
+        		},
+        		"center": [      37.561429,     126.977997 ],
+        		"zoom":              9,
+        		"id": "chart156ef76f40353" 
+      	  }
+    	 
+        	var map = L.map(spec.dom, spec.mapOpts)
+
+        	var baseLayers = {
+        		'Naver Street Map': L.Proj.TileLayer.TMS.provider('NaverMap.Street').addTo(map),
+        		'Naver Satellite Map': L.Proj.TileLayer.TMS.provider('NaverMap.Satellite'),
+        		'Naver Hybrid Map': L.Proj.TileLayer.TMS.provider('NaverMap.Hybrid'),
+        		'Naver Cadastral Map': L.Proj.TileLayer.TMS.provider('NaverMap.Cadastral', null, {opacity : 1.0})
+
+        	};
+        	var overlayLayers = {
+        		'Naver Cadastral Map': L.Proj.TileLayer.TMS.provider('NaverMap.Cadastral')
+        	};
+        	L.control.layers(baseLayers, overlayLayers, {collapsed: false}).addTo(map);
+            map.setView(spec.center, spec.zoom);
+             
+          L.marker([37.5545355, 126.9706773])
+            	.addTo( map )
+          		.bindPopup("<p> Seoul Station </p>")
+        	L.marker([37.5666208, 126.9783823])
+        		.addTo( map )
+        		.bindPopup("<p> City Hall of Seoul </p>")
+
+            if (spec.circle2){
+              for (var c in spec.circle2){
+                var circle = L.circle(c.center, c.radius, c.opts)
+                 .addTo(map);
+              }
+            }
+    	  </script>
+
+
+      <h3>
+        <a name="user-content-daum-map" class="anchor" href="#daum-map" aria-hidden="true">
+          <span class="octicon octicon-link"></span>
+        </a>
+        Daum Map
+      </h3>
+
+      <div class="highlight highlight-coffee">
+        <pre>
+<span class="nx">require</span><span class="p">(</span><span class="nx">rMapskr</span><span class="p">)</span>
+<span class="nx">map3</span> <span class="o">&lt;-</span> <span class="nx">Leaflet$new</span><span class="p">(</span><span class="s">"daum"</span><span class="p">)</span>
+<span class="c1">#map3$setView(c(37.56641861115186, 126.97787362769193), zoom = 11)</span>
+<span class="nx">map3$marker</span><span class="p">(</span><span class="nx">c</span><span class="p">(</span><span class="mf">37.5545355</span><span class="p">,</span> <span class="mf">126.9706773</span><span class="p">),</span> <span class="nv">bindPopup = </span><span class="s">"&lt;p&gt; Seoul Station &lt;/p&gt;"</span><span class="p">)</span>
+<span class="nx">map3$marker</span><span class="p">(</span><span class="nx">c</span><span class="p">(</span><span class="mf">37.5666208</span><span class="p">,</span> <span class="mf">126.9783823</span><span class="p">),</span> <span class="nv">bindPopup = </span><span class="s">"&lt;p&gt; City Hall of Seoul &lt;/p&gt;"</span><span class="p">)</span>
+<span class="nx">map3</span>
+        </pre>
+      </div>
+
+        
+      <div id = 'chart156ef76f40354' class = 'rMapskr leaflet'></div>    
+          <script>
+          var spec = {
+            "dom": "chart156ef76f40354",
+            "width":           800,
+            "height":            600,
+            "mapOpts": {
+              "crs": L.Proj.CRS.TMS.Daum,
+              "worldCopyJump": false,
+              "continuousWorld": true,
+              "zoomControl": true 
+            },
+            "center": [      37.561429,     126.977997 ],
+            "zoom":              9,
+            "id": "chart156ef76f40354" 
+          }
+         
+          var map = L.map(spec.dom, spec.mapOpts)
+          var baseLayers = {
+              'Daum Street Map': L.Proj.TileLayer.TMS.provider('DaumMap.Street').addTo(map),
+              'Daum Satellite Map' : L.Proj.TileLayer.TMS.provider('DaumMap.Satellite')
+          };
+
+          var overlayLayers = {
+              'Daum Hybrid Map' : L.Proj.TileLayer.TMS.provider('DaumMap.Hybrid'),
+              'Daum Physical Map' : L.Proj.TileLayer.TMS.provider('DaumMap.Physical')
+          };
+
+          L.control.layers(baseLayers, overlayLayers, {collapsed: false}).addTo(map);
+          map.setView(spec.center, spec.zoom);
+           
+          L.marker([37.5545355, 126.9706773])
+            .addTo( map )
+            .bindPopup("<p> Seoul Station </p>")
+          L.marker([37.5666208, 126.9783823])
+          .addTo( map )
+          .bindPopup("<p> City Hall of Seoul </p>")
+
+          if (spec.circle2){
+            for (var c in spec.circle2){
+              var circle = L.circle(c.center, c.radius, c.opts)
+               .addTo(map);
+            }
+          }
+        </script>
+      </div>
   </body>
 </html>
