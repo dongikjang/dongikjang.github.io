@@ -21,7 +21,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   </head>
 <body class='theme-base-05'>
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"> </input>
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"> 
 <div class="sidebar" id="sidebar">
     <div class="sidebar-item">
       <p></p>
@@ -59,43 +59,37 @@
         </p>
     </div>
 </div> 
-<!--div class="wrap"> -->
+
+<div class="wrap">
+  <div class="masthead">
+      <div class="container">
+          <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Statistician </a>
+            <small>spatio-temporal data analysis and visualization with R, Python and Matlab</small>
+            <div style='float:right;'>
+              <a href="http://github.com/dongikjang">
+                  <i class='fa fa-github'> </i>
+              </a>
+            </div>
+          </h3>
+      </div>
+  </div>
   <div class="container content">
-        <div class="post">
-            <h1 class="post-title"></h1>
-            <span class="post-date"></span>
-   
-      <div class="wrap">
-
-            <div class="masthead">
-              <div class="container">
-                  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-                    <h3 class="masthead-title">
-                      <a href="/" title="Home">Statistician</a>
-                      <small>spatio-temporal data analysis and visualization with R, Python and Matlab</small>
-                      <div style='float:right;'>
-                        <a href="http://github.com/dongikjang">
-                            <i class='fa fa-github'> </i>
-                        </a>
-                      </div>
-                    </h3>
-              </div>
-           </div>
-      <div class="container content">
-      <h2>Softwares</h2>
+    <h2>Softwares</h2>
       
-        <ol class="task-list">
+      <ol class="task-list">
         <li><p><strong><a href="https://github.com/dongikjang/rMapskr">The package <em>rMapskr</em> for <em>R</em></a></strong>: interactive Daum, Naver and VWorld maps with R</p></li>
         <li><p><strong><a href="http://cran.r-project.org/package=SynchWave">The package <em>SynchWave</em> for <em>R</em></a></strong>: Synchrosqueezed Wavelet Transform</p></li>
         <li><p><strong><a href="http://stat.snu.ac.kr/heeseok/adaptsmooth/">The package <em>adaptsmooth</em> for <em>R</em></a></strong>: An Improvement of Spatially Adaptive Smoothing Spline Fitting</p></li>
         <li><p><strong><a href="http://stat.snu.ac.kr/heeseok/autots/">The package <em>autots</em> for <em>R</em></a></strong>: Extending the Scope of Automatic Time Series Model Selection</p></li>
-        </ol>
-      <h2>R scritps</h2>
+      </ol>
+    <h2>R scritps</h2>
         <ol class="task-list">
-        <li><p><strong><a href="https://github.com/dongikjang/DaumMap">R functions for using Daum Map tiles</a></strong></p></li>
-        <li><p><strong><a href="https://github.com/dongikjang/DaumMap">R functions for using Naver Map tiles</a></strong></p></li>
-        <li><p><strong><a href="https://github.com/dongikjang/GoogleMap">Modified R functions for using Stamen with watercolor </a></strong></p></li>
+          <li><p><strong><a href="https://github.com/dongikjang/DaumMap">R functions for using Daum Map tiles</a></strong></p></li>
+          <li><p><strong><a href="https://github.com/dongikjang/DaumMap">R functions for using Naver Map tiles</a></strong></p></li>
+          <li><p><strong><a href="https://github.com/dongikjang/GoogleMap">Modified R functions for using Stamen with watercolor </a></strong></p></li>
         </ol>
           <style>
           .lead {
@@ -107,10 +101,10 @@
           }
         </style>
 
-          </div>
-      </div>
-    </div>  
-    <script type="text/javascript">
+  </div>
+</div>
+
+  <script type="text/javascript">
     var _gauges = _gauges || [];
     (function() {
     var t = document.createElement('script');
@@ -123,6 +117,7 @@
     s.parentNode.insertBefore(t, s);
     })();
   </script> 
-<!--/div-->
+  <script src="../rMapskr/libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
